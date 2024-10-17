@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Animation</title>
+</head>
+<body>
+    
+     <div class="logo"><a  href="#">A</a></div>
+    <div class="div" id="div">       
+      <div class="div1">
+          <div class="divin"></div>
+          
+      </div>   
+      <div class="containt" id="del">
+          <div id="shout"></div>
+          <h1>HELLO</h1>
+          <p>Ayoub</p>
+          <div class="login">
+              <form action="" method="get">
+                  <div onmousedown="show()" onmouseout="pass()" class="show"></div>                  
+                  <h2>Login</h2>
+                  <input type="text">
+                  <input  id="show" type="password">
+                  <input class="bt" type="submit" value="Log in ">
+              </form>
+          </div>
+          <div class="cercel">
+          <div class="triangle"></div>    
+                
+          </div>
+          
+      </div>
+      <div class="plus" onclick="plus()"></div>
+      <div class="moins" onclick="moins()"></div>
+      <div class="down" ondblclick="shout()" onclick="open()"></div>
+      <div class="div2">
+          <div class="cer"></div>
+          <div class="ce"></div>
+          <div class="c"></div>
+          
+      </div>   
+         
+    </div>
+    
+    <script>
+        function show (){
+  document.getElementById('show').type = 'text';
+        }
+        function pass (){
+  document.getElementById('show').type = 'password';
+        }
+        function plus(){
+  document.getElementById('div').style.transform="scale(1.6) translateY(120px)"    
+  document.getElementById('div').style.transition="all 3s"  ;  
+        }
+              function moins(){
+  document.getElementById('div').style.transform="scale(1)"  ;       
+        }
+           
+        
+    </script>
+</body>
+</html>

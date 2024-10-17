@@ -1,0 +1,328 @@
+body{
+    text-align:center;
+
+    width: 100vw;
+    overflow: scroll;
+    
+}
+@keyframes opa{
+    0%{ opacity:0;}
+    50% { opacity:1;}
+    100%{ opacity:0;}
+}
+
+.div{
+    width: 250px;
+    height: 500px;
+    background: black;
+    margin:auto;
+    position: relative;
+    top:30px;
+    border-radius: 20px;
+    z-index:1; 
+    box-shadow: 0 0 20px 1px black;
+}
+.div1{
+    width: 34px;
+    border-radius:0 0 17px 17px  ;
+    height: 17px;
+    background: black;
+    position: relative;
+    top:5px;
+    left:50%;
+    z-index:2;
+    transform: translateX(-50%);
+}
+.div2{
+   width: 229px;
+   
+   height: 30px;
+   background: white;
+   position : absolute;
+   bottom:7px;
+   left:50%;
+   transform: translateX(-50%);
+   border-radius: 0 0 15px 15px;
+   overflow: hidden;
+   
+}
+.divin{
+    width: 8px;
+    border-radius: 50%;
+    height: 8px;
+    background: white;
+    position: relative;
+    top:3px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:10;
+    animation : hv 10s linear infinite;
+}
+.cer{
+    width: 12px; 
+   height: 12px;
+   background: white;
+   border: 2px solid black;
+   position : absolute;
+   top: 50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   border-radius: 50%;
+}
+.cer:active{
+    box-shadow: 0 0 30px 9px #545454;
+    transition:all 0.01s;
+}
+
+.plus{
+    height: 45px;
+    width: 5px;
+    border-radius: 5px;
+    background: black;
+    position: absolute;
+    left:-2px;
+    top:50px;
+}
+.moins{
+    height: 45px;
+    width: 5px;
+    border-radius: 5px;
+    background: black;
+    position: absolute;
+    left:-2px;
+    top:100px;
+}
+.down{
+    height: 45px;
+    width: 5px;
+    border-radius: 5px;
+    background: black;
+    position: absolute;
+    right:-2px;
+    top:150px;
+}
+.ce{
+    width: 10px; 
+   height: 10px;
+   background: white;
+   border: 2px solid black;
+   border-left: 2px solid white;
+   position : absolute;
+   top: 50%;
+   left:80%;
+   transform: translate(-80%,-50%);
+   border-top-right-radius: 20px ;
+   border-bottom-right-radius: 20px ; 
+}
+.c:active{
+    box-shadow: 0 0 30px 9px #545454;
+    transition:all 0.01s;
+}
+.ce:active{
+    box-shadow: 0 0 30px 9px #545454;
+    transition:all 0.01s;
+}
+.c{
+    width: 12px; 
+   height: 12px;
+   background: white;
+   border: 2px solid black;
+   position : absolute;
+   top: 50%;
+   left:20%;
+   transform: translate(-20%,-50%);
+   border-radius: 2px;
+   border-top-right-radius: 7px ;
+}
+.containt{
+    width: 229px ;
+    height: 449px;
+    background: white;
+    margin:auto;
+    position: absolute;
+    top:10px;
+    left:50%;
+    border-radius: 16px 16px 0 0 ;
+    overflow:hidden;
+    transform: translateX(-50%);
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid black;
+    position: absolute;
+    top:50%;
+    left:55%;
+    transform: translate(-55%,-50%);
+}
+.cercel{
+    width: 40px; 
+   height: 40px;
+   background: white;
+   border: 3px solid black;
+   position : absolute;
+   top: 55%;
+   left:50%;
+   opacity:0;
+   transform: translate(-50%,-55%);
+   border-radius: 50%;
+   animation: opa 1.2s ;
+}
+h1{
+    font : 600 1.5rem normal;
+    position: absolute;
+    left:10px;
+    top:10px;
+    letter-spacing:2px;
+    animation: hello 5s linear forwards ;
+    t
+}
+@keyframes hello{
+    0%{ left:2009px;}
+    20%{ left:5px;}
+    50%{ left:6px;}
+    60% { left:7px; }
+    70% { left:10px; }
+    80%{ left:9px;}
+    90%{ left:3000px;}
+    100%{ left:2009px;}
+}
+@keyframes ayoub{
+    0%{ top:1000px;}
+    10%{ top:600px;}
+    30%{ top:700px;}
+    70%{ top:600px;}
+    80%{ top:100px;}
+    90%{ top:50px;}
+    100%{ top:-10px; width:110% ;}
+}
+::selection{
+    background: black ;
+    color: white;
+  
+}
+h1::first-letter{
+    color: white;
+    background: black;
+    padding-left: 2px;
+    padding-right:  2px;
+    border-radius: 5px;
+    text-shadow: 0 0 10px white;
+    font: 800 1.7rem normal;
+}
+h2::first-letter{
+    color: white;
+    background: black;
+    padding-left: 2px;
+    padding-right:  2px;
+    border-radius: 5px;
+    text-shadow: 0 0 10px white;
+    font: 800 1.7rem normal;
+}
+p{  
+    position: absolute;
+    font: 700 2rem normal;
+      left: 50%; 
+      top:-10px;
+    transform: translateX(-50%);
+    color: white;
+    background: black;
+    padding: 1px;
+    border-radius: 5px;
+    text-shadow: 0 0 10px white;
+    animation: ayoub 6s linear forwards;
+    
+}
+.login{
+    position: absolute;
+    top: 40%;
+    left:50%;
+    margin:auto;
+    transform: translate(-50%,-40%);
+    animation: login 9s linear forwards;
+}
+@keyframes login{
+    0%{ top: 900%;}
+    10%{ top: 900%;}
+    20%{ top: 900%;}
+    30%{ top: 900%;}
+    60%{ top: 900%;}
+    75%{ top: 400%;}
+    80%{ top: 100%;}
+    85%{ top: 40%;}
+    90%{ top: 40%;}
+    100%{ top: 40%;}
+}
+input{
+    margin: 18px auto;
+    outline: none;
+    width: 180px;
+    display: block;
+    border: none;
+    border-radius: 6px;
+    border-left: 4px solid black;
+    font: 600 20px normal ;
+    box-shadow: 0 5px 10px -10px black;
+    text-transform: upperccase;
+    transition: all 0.2s;
+    
+}
+input:focus{
+    border: none;
+    border-bottom: 4px solid black;
+    transition: all 0.2s;
+}
+.bt{
+    width: 100px;
+    
+    margin-top:40px;
+    background: linear-gradient(to right, black 90%, white 90% 95% , black 95% 100%);
+    text-shadow: 0 0 10px white;
+    color: white;
+    padding:3px;
+    border: none;
+    }
+.bt:focus{
+    border: none;
+    transform: scale(1.2);
+    }    
+h2{
+       margin-bottom: 70px; 
+    }
+.show{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: black;
+    border: 4px double white;
+    position: absolute;
+    right: 9px ;
+    top:175.5px;
+    
+}    
+.show:active{
+    background: white;
+    border: 4px double black;
+}
+.logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    border: 5px solid black;
+    position: fixed;
+    left:5px;
+    box-shadow: 0 0 20px 1px black ;
+    top:0px;
+    }
+
+a{
+    text-decoration:none;
+    color:black;
+    font: 600 17px normal ;
+    position: relative;
+    text-shadow: 0 0 10px black;
+    top:2px;
+}
