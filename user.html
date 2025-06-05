@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="vid" autoplay></video>
+    <script src="peerjs.js"></script>
+    <script>
+        let peer = new Peer(1234);
+        let stream; 
+        function getaudio() {
+            navigator.mediaDevices.getUserMedia({audio:true})
+            .then(s => {
+                stream = s ;
+            }).catch(err => {
+                alert("Active Micro for use mine")
+            })
+            
+        }getaudio();
+        peer.on("call" , call => {
+            console.log(12);
+            document.getElementById('vid').srcObject = stream ;
+            call.answer(stream);
+        });
+    </script>
+</body>
+</html>
