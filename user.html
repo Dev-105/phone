@@ -6,25 +6,42 @@
     <title>Document</title>
 </head>
 <body>
-    <video id="vid" autoplay></video>
-        <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
-    <script>
-        let peer = new Peer(1234);
-        let stream; 
-        function getaudio() {
-            navigator.mediaDevices.getUserMedia({audio:true})
-            .then(s => {
-                stream = s ;
-            }).catch(err => {
-                alert("Active Micro for use mine")
-            })
-            
-        }getaudio();
-        peer.on("call" , call => {
-            console.log(12);
-            document.getElementById('vid').srcObject = stream ;
-            call.answer(stream);
+    <video class="hidden" autoplay id="vid"></video>
+    <button id="call" class="btn">appel</button>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+<script>
+        let peer = new Peer("0");
+        let call = document.getElementById('call');
+        let vid = document.getElementById('vid');
+        call.addEventListener('click',()=>{
+            navigator.mediaDevices.getUserMedia({video:true ,audio:true}).then(stream => {
+                let startcall = peer.call("1",stream) ;
+                startcall.on('stream' , friends => {
+                    vid.srcObject = friends ;
+                });
+            }).catch(error => {
+        alert("❌ Error accessing media devices:");
+        stream.getTracks().forEach(track => {
+            track.stop();
         });
+    });
+        });
+        peer.on("call" , (incall)=> {
+            let have = confirm('you have an appel from your friends');
+            if (have) {
+                navigator.mediaDevices.getUserMedia({video:true ,audio:true}).then(stream => {
+                    incall.answer(stream);
+                    incall.on('stream' , friends => {
+                    vid.srcObject = friends ;
+                });
+            }).catch(error => {
+            stream.getTracks().forEach(track => {
+            track.stop();
+        });
+        console.log("❌ Error accessing media devices:",error.message)
+    });
+}
+})
     </script>
 </body>
 </html>
