@@ -27,8 +27,7 @@
     });
         });
         peer.on("call" , (incall)=> {
-            let have = confirm('you have an appel from your friends');
-            if (have) {
+
                 navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {
                     incall.answer(stream);
                     incall.on('stream' , friends => {
@@ -40,7 +39,6 @@
         });
         console.log("❌ Error accessing media devices:",error.message)
     });
-}
 })
     </script>
 </body>
