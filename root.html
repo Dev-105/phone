@@ -14,7 +14,7 @@
         let call = document.getElementById('call');
         let vid = document.getElementById('vid');
         call.addEventListener('click',()=>{
-            navigator.mediaDevices.getUserMedia(audio:true}).then(stream => {
+            navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {
                 let startcall = peer.call("0",stream) ;
                 startcall.on('stream' , friends => {
                     vid.srcObject = friends ;
