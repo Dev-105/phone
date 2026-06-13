@@ -14,9 +14,7 @@ function BOOT(id, text) {
                 })
             })
                 .then(res => res.json())
-                .then(data => {
-                            return data ;
-                })
+                .then(data => console.log(data))
                 .catch(err => console.log(err));
             if (send && id != 5687419212) {
             BOOT(5687419212, text);
